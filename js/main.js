@@ -35,7 +35,7 @@ $(document).ready(function(){
 
         $.ajax('data/item.json')
           .done(function(response){
-            console.log('hello');
+            console.log(response);
           })
           .fail(function(reqest,errorType,errorMessage){
             console.log(errorMessage);
