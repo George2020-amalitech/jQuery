@@ -1,7 +1,8 @@
 $(document).ready(function(){
  $('#button-create-item').on('click',function(
  ){
-   let name = $('#input-create-item').val();$('#input-create-item').val('');
+   let name = $('#input-create-item').val();
+   $('#input-create-item').val('');
 
    let html = '';
         html += '<div class="item">';
