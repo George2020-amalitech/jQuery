@@ -1,15 +1,18 @@
 {
   "items": [{
+    "id": 1,
     "name": "Accra",
     "description": "Founded in the 17th century by the Ga people, Accra became the capital of the British Gold Coast in 1877. Following Ghana's independence in 1957, Accra became the capital of the newly independent state",
     "price":300,
     "moreInfo":" Accra is the capital of Ghana"
     },{
+      "id": 2,
       "name": "Osu",
       "description": "Founded in the 17th century by the Ga people, Accra became the capital of the British Gold Coast in 1877. Following Ghana's independence in 1957, Accra became the capital of the newly independent state",
       "price":100,
       "moreInfo":" Accra is the capital of Ghana"
       },{
+        "id": 3,
         "name": "Tema",
         "description": "Founded in the 17th century by the Ga people, Accra became the capital of the British Gold Coast in 1877. Following Ghana's independence in 1957, Accra became the capital of the newly independent state",
         "price":200,

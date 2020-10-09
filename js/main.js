@@ -1,8 +1,10 @@
-function addItem(name,description,price, moreInfo) {
+var cart = 0;
+
+function addItem(id,name,description,price, moreInfo) {
 
 
      let html = '';
-          html += '<div class="item">';
+          html += '<div class="item" data-id="' + id +'">';
           html += '<div class="name">' + name + '</div>';
           html += '<img src="assets/accra.jpg"></img>';
           html += '<div class="description">' + description + '</div>';
@@ -40,13 +42,34 @@ $(document).ready(function(){
           .done(function(response){
             let items = response.items;
             items.forEach(function(item){
-              addItem(item.name,item.description,item.price,item.moreInfo);
+              addItem(item.id,item.name,item.description,item.price,item.moreInfo);
             });
 
           })
           .fail(function(reqest,errorType,errorMessage){
             console.log(errorMessage);
           })
-          .always()
+          .always(function(){
+
+          });
+
+          $('#container').on('click','item-add',function(){
+            let id = $(this).parent().data('id');
+            $.ajax('data/addToCart.json', {
+              type: 'post',
+              data:{ id: id },
+              dataType: 'json',
+              contentType: 'application/json'
+            })
+            .done(function(response){
+              if (response.message === 'success'){
+                let price = response.price;
+
+                cart += price;
+
+                $('#cart-container').text('Ghc' + cart);
+              }
+            });
+          });
 
         });
