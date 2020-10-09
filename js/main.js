@@ -13,8 +13,8 @@ $(document).ready(function(){
         html += '<button class="item-add">Add to cart</button>';
         html += '<button class="item-remove">Remove</button>'
         html += '<br/>';
-        html += '<a href="#">More info</a>';
-        html += '<div class=""more-info"> Accra is the capital of Ghana </div>';
+        html += '<a class="more-info-link" href="#">More info</a>';
+        html += '<div class="more-info"> Accra is the capital of Ghana </div>';
         html += '</div>';
 
         $('#container').prepend(html);
@@ -23,7 +23,10 @@ $(document).ready(function(){
         $('#container').on('click','.more-info-link',function(event){
           event.preventDefault();
 
-          $(this).parent().find('.more-info').toggle();
+          $(this).parent().find('.more-info').slideToggle('slow');
+          $(this)
+            .animate({"opacity":0.5, "margin-left":10}, 'fast')
+            .animate({"opacity":1.0, "margin-left":0}, 'fast');
         });
 
         $('#container').on('click','.item-remove',function(){
