@@ -76,8 +76,8 @@ $(document).ready(function(){
             if ($(this).is(':checked')){
               $('#newsletter-frequency').show();
             }else {
-              $('#newsletter-frequency').hide(); 
+              $('#newsletter-frequency').hide();
             }
           })
-
+            $('#newsletter-checkbox').trigger('change');
         });
