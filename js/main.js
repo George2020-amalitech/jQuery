@@ -74,9 +74,9 @@ $(document).ready(function(){
 
           $('#newsletter-checkbox').on('change',function(){
             if ($(this).is(':checked')){
-              console.log('Yes');
+              $('#newsletter-frequency').show();
             }else {
-              console.log('No');
+              $('#newsletter-frequency').hide(); 
             }
           })
 
