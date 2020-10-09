@@ -32,7 +32,11 @@ $(document).ready(function(){
           $(this).parent().remove();
         })
 
-        $.ajax('data/item.json')
+        $.ajax('data/item.json', {
+          dataType: 'json',
+          contentType: 'application/json',
+          cache: false
+        })
           .done(function(response){
             let items = response.items;
             items.forEach(function(item){
