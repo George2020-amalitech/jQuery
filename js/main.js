@@ -72,4 +72,12 @@ $(document).ready(function(){
             });
           });
 
+          $('#newsletter-checkbox').on('change',function(){
+            if ($(this).is(':checked')){
+              console.log('Yes');
+            }else {
+              console.log('No');
+            }
+          })
+
         });
