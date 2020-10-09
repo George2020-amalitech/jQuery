@@ -33,7 +33,13 @@ $(document).ready(function(){
           $(this).parent().remove();
         })
 
-        $.ajax('data/item.json',function(response){
-          
-        })
-});
+        $.ajax('data/item.json')
+          .done(function(response){
+            console.log('hello');
+          })
+          .fail(function(reqest,errorType,errorMessage){
+            console.log(errorMessage);
+          })
+          .always()
+
+        });
