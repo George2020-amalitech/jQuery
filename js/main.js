@@ -32,4 +32,8 @@ $(document).ready(function(){
         $('#container').on('click','.item-remove',function(){
           $(this).parent().remove();
         })
+
+        $.ajax('data/item.json',function(response){
+          
+        })
 });
